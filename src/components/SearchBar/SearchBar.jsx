@@ -3,6 +3,7 @@ import { BsSearch } from 'react-icons/bs';
 import './SearchBar.css';
 import fetchProducts from './../../api/fetchProducts';
 import AppContext from '../../context/AppContext';
+import { GiSharpCrown } from 'react-icons/gi';
 
 function SearchBar () {
 
@@ -20,7 +21,12 @@ function SearchBar () {
   };
 
   return(
+    
     <form className="search-bar" onSubmit={handleSearch}> 
+      <div className="logo-image">
+        <a href="#home"> <GiSharpCrown /> </a>
+        <span>GT Store</span>
+      </div>
       <input type="search"
         value={ searchValue } 
         placeholder="Buscar Produtos" 

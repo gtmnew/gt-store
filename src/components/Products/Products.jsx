@@ -11,7 +11,7 @@ function Products() {
   
 
   useEffect(() => {
-    fetchProducts('perifericos').then((response) => {
+    fetchProducts('mouse-gamer').then((response) => {
       setProducts(response);
       setLoading(false);
     });
@@ -19,7 +19,7 @@ function Products() {
 
   return (
     (loading && <Loading />) || (
-      <section className="products container"> 
+      <section className="products container" id="home"> 
         {products.map((product) => <ProductCard key={product.id} data={product} />)}
       </section>
     )

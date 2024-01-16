@@ -1,4 +1,6 @@
+
 .search-bar {
+  position: relative;
   display: flex;
   background-color: white;
   width: 100%;
@@ -7,6 +9,31 @@
    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.1);
    gap: 13px;
    padding-right: 13px;
+   margin-left: 50px;
+   border-radius: 5px;
+}
+
+.logo-image {
+  position: absolute;
+  top: 5px;
+  left: -200px;
+  font-size: 2rem;
+  }
+
+.logo-image a {
+  text-decoration: none;
+  color: #bd6500;
+  padding-left: .5rem;
+  padding-bottom: .2rem;
+  padding-top: .2rem;
+  border: 2px solid #bd6500;
+  border-radius: 50%;
+}
+
+.logo-image span {
+  color: #fff;
+  font-size: 1rem;
+  padding-left: .5rem;
 }
 
 .search__input {
@@ -17,6 +44,7 @@
   font-size: 0.8rem;
   font-weight: 500;
   border-right: 1px solid #ddd;
+  border-radius: 5px;
 }
 
 .search__button {
