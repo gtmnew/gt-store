@@ -6,12 +6,10 @@ import Loading from '../Loading/Loading';
 import AppContext from '../../context/AppContext';
 
 function Products() {
-
   const { products, setProducts, loading, setLoading } = useContext(AppContext);
-  
 
   useEffect(() => {
-    fetchProducts('mouse-gamer').then((response) => {
+    fetchProducts('gamer').then((response) => {
       setProducts(response);
       setLoading(false);
     });
@@ -19,8 +17,10 @@ function Products() {
 
   return (
     (loading && <Loading />) || (
-      <section className="products container" id="home"> 
-        {products.map((product) => <ProductCard key={product.id} data={product} />)}
+      <section className="products container" id="home">
+        {products.map((product) => (
+          <ProductCard key={product.id} data={product} />
+        ))}
       </section>
     )
   );
